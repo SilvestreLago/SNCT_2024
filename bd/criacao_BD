@@ -1,0 +1,15 @@
+CREATE table usuario(
+	id INTEGER PRIMARY KEY autoincrement,
+	nome varchar(45),
+	email varchar(30),
+	senha varchar(30)
+);
+
+CREATE table post(
+	id INTEGER PRIMARY KEY autoincrement,
+	titulo varchar(45),
+	conteudo text,
+	img varchar(45),
+	data_publicacao datetime,
+	id_criador varchar(45) references usuario(id)
+);
