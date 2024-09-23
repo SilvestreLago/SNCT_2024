@@ -36,7 +36,13 @@ include_once "./scripts/verf_login.php";
                     <a class="nav-link" href="index.php">Adicionar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="true" href="remove.php">Remover</a>
+                    <a class="nav-link active" aria-current="true" href="remove_T.php">Remover Titulo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="remove_L.php">Remover Lista</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="alt.php">Alterar informação</a>
                 </li>
                 </ul>
             </div>
@@ -60,12 +66,12 @@ include_once "./scripts/verf_login.php";
                 </form>
             </div>
             <?php //TRATAMENTO DE ERRO
-                 if(isset($_GET['erro']) == 'add'){
+                if(isset($_GET['erro']) == 'add'){
                     echo'<div class="alert alert-danger" role="alert">Erro ao remover postagem.</div>';
                 }else if(isset($_GET['add']) == 'success'){
                     echo'<div class="alert alert-success" role="alert">Postagem removida com sucesso.</div>';
-                  }
-            ?>
+                }
+                ?>
         </div>
     </article>
 </body>

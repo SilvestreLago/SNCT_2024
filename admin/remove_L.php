@@ -29,17 +29,17 @@ include_once "./scripts/verf_login.php";
     </nav>
 
     <article style="display: flex; justify-content: center; margin-top: 50px;">
-        <div class="card text-center"  style="max-width: fit-content;">
+        <div class="card text-center">
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="true" href="index.php">Adicionar</a>
+                    <a class="nav-link" href="index.php">Adicionar</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="remove_T.php">Remover Titulo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="remove_L.php">Remover Lista</a>
+                    <a class="nav-link active" aria-current="true" href="remove_L.php">Remover Lista</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="alt.php">Alterar informação</a>
@@ -47,38 +47,26 @@ include_once "./scripts/verf_login.php";
                 </ul>
             </div>
             <div class="card-body">
-                <h5 class="card-title">Adicionar postagem:</h5>
-        
-                <form action="./scripts/add.php" method="post">
-        
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Título:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Título..." required name="titulo">
-                </div>
+                <h5 class="card-title" style='padding: 10px'>Lista de Posts:</h5>
+                <form action="./scripts/remove_list.php" method='post'>
+                    <div class='card-body'>
+                    <?php
+                    include './scripts/show_list.php';
+                    ?>
+            
+                    <input type="submit" value="Remover" class="btn btn-danger">
+                    </div>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Conteúdo:</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Conteúdo..." required name="conteudo"></textarea>
-                </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Certeza que deseja adicionar essa postagem?
-                    </label>
-                </div>
-
-                <input type="submit" value="Adicionar" class="btn btn-primary">
                 </form>
-            </div>
 
                 <?php //TRATAMENTO DE ERRO
-                 if(isset($_GET['erro']) == 'add'){
-                    echo'<div class="alert alert-danger" role="alert">Erro ao adicionar postagem.</div>';
-                }else if(isset($_GET['add']) == 'success'){
-                    echo'<div class="alert alert-success" role="alert">Postagem adicionada com sucesso.</div>';
-                  }
+                    if(isset($_GET['erro']) == 'add'){
+                        echo'<div class="alert alert-danger" role="alert">Erro ao remover postagem.</div>';
+                    }else if(isset($_GET['add']) == 'success'){
+                        echo'<div class="alert alert-success" role="alert">Postagem removida com sucesso.</div>';
+                    }
                 ?>
+            </div>
         </div>
     </article>
 </body>

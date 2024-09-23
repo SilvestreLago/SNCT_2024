@@ -29,11 +29,11 @@ include_once "./scripts/verf_login.php";
     </nav>
 
     <article style="display: flex; justify-content: center; margin-top: 50px;">
-        <div class="card text-center"  style="max-width: fit-content;">
+        <div class="card text-center">
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="true" href="index.php">Adicionar</a>
+                    <a class="nav-link" href="index.php">Adicionar</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="remove_T.php">Remover Titulo</a>
@@ -42,42 +42,43 @@ include_once "./scripts/verf_login.php";
                     <a class="nav-link" href="remove_L.php">Remover Lista</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="alt.php">Alterar informação</a>
+                    <a class="nav-link active" aria-current="true" href="alt.php">Alterar informação</a>
                 </li>
                 </ul>
             </div>
             <div class="card-body">
-                <h5 class="card-title">Adicionar postagem:</h5>
+                <h5 class="card-title">Alterar informações de usuário:</h5>
         
-                <form action="./scripts/add.php" method="post">
-        
+                <form action="./scripts/alt.php" method="post">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Título:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Título..." required name="titulo">
+                    <label for="exampleFormControlInput1" class="form-label">Nome:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome da Silva" required name="name">
                 </div>
-
                 <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Conteúdo:</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Conteúdo..." required name="conteudo"></textarea>
+                    <label for="exampleFormControlInput1" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email@email.com" required name="email">
                 </div>
-
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Senha:</label>
+                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="********" required name="passwd">
+                </div>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
                     <label class="form-check-label" for="flexCheckDefault">
-                        Certeza que deseja adicionar essa postagem?
+                        Certeza que deseja alterar as informações de usuários?
                     </label>
                 </div>
-
-                <input type="submit" value="Adicionar" class="btn btn-primary">
+        
+                <input type="submit" value="Alterar" class="btn btn-primary">
                 </form>
             </div>
-
-                <?php //TRATAMENTO DE ERRO
-                 if(isset($_GET['erro']) == 'add'){
-                    echo'<div class="alert alert-danger" role="alert">Erro ao adicionar postagem.</div>';
-                }else if(isset($_GET['add']) == 'success'){
-                    echo'<div class="alert alert-success" role="alert">Postagem adicionada com sucesso.</div>';
-                  }
+            <?php //TRATAMENTO DE ERRO
+              
+              if(isset($_GET['erro']) == 'alt'){
+                  echo'<div class="alert alert-danger" role="alert">Erro ao alterar informações.</div>';
+                }else if(isset($_GET['alt']) == 'success'){
+                    echo'<div class="alert alert-success" role="alert">Alterações realizadas com sucesso.</div>';
+                }
                 ?>
         </div>
     </article>
