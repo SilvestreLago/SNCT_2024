@@ -51,16 +51,32 @@ include_once "./scripts/verf_login.php";
         
                 <form action="./scripts/alt.php" method="post">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Nome:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome da Silva" required name="name">
-                </div>
-                <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Email:</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email@email.com" required name="email">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email@email.com" name="email">
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Senha:</label>
-                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="********" required name="passwd">
+                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="********" name="passwd">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Nome:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome da Silva" name="name">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Cidade:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Cidade" name="cidade">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Estado Civil:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Estado Civil" name="estado">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Interesses:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Interesses" name="interesses">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Quem sou eu:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Quem sou eu?" name="texto"></textarea>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>

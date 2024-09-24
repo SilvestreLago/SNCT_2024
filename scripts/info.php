@@ -2,12 +2,15 @@
 include_once "./scripts/conn.php";
 
 //CONSULTA DE DADOS
-$query = "SELECT nome FROM usuario WHERE id = 1";
+$query = "SELECT * FROM usuario WHERE id = 1";
 $result = $db->query($query);
 
-//TRANSFORMA EM LISTA E PRINTA
+//TRANSFORMA EM LISTA E DEFINE VARIÁVEIS PARA PRINTAR
 foreach ($result as $row){
-    echo "$row[nome]";
+    $nome = "$row[nome]";
+    $cidade = "$row[cidade]";
+    $estado = "$row[estado_civil]";
+    $interesses = "$row[interesses]";
+    $texto = "$row[texto]";
 }
-
 ?>

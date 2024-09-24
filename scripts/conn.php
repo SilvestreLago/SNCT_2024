@@ -1,5 +1,5 @@
 <?php 
-//Estabelecer conexão com o banco de dados.
+//ESTABELECER CONEXÃO COM O BANCO DE DADOS
 try{
     $caminho_DB = __DIR__ . '/' . '../bd/data_base.db';
 

@@ -1,6 +1,7 @@
 <?php 
 include_once "conn.php";
 
+//TÍTULO PARA REMOÇÃO
 $titulo =  trim(htmlspecialchars(strip_tags( $_POST['titulo']))) ?? '';
 
 if($titulo != ''){
@@ -11,12 +12,12 @@ if($titulo != ''){
     
         $result = $query->execute();
     
-        header('Location: ../remove.php?add=success');
+        header('Location: ../remove_T.php?add=success');
     }catch (PDOException $e){ //ERRO
         echo "Erro: " . $e->getMessage();
-        header('Location: ../remove.php?erro=add');
+        header('Location: ../remove_T.php?erro=add');
     }
-}else{
+}else{ //ERRO
     header('Location: ../remove.php?erro=add');
 }
 

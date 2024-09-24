@@ -1,8 +1,10 @@
 <?php 
 include_once "conn.php";
 
+//TODOS OS TÍTULOS SELECIONADOS
 $num = count($_POST['titulo']) -1;
-//CONTEUDO PARA ADIÇÃO
+
+//CONTEUDO PARA REMOÇÃO
 for($i=0 ; $i<=$num; $i++){
     $titulo = $_POST['titulo'][$i];
     try{//TENTATIVA DE REMOVER
@@ -13,10 +15,12 @@ for($i=0 ; $i<=$num; $i++){
         $result = $query->execute();    
     }catch (PDOException $e){ //ERRO
         echo "Erro: " . $e->getMessage();
-        header('Location: ../remove.php?erro=add');
+        header('Location: ../remove_L.php?erro=add');
     }
 }
-header('Location: ../remove.php?add=success');
+
+//REDIRECIONAMENTO FINAL
+header('Location: ../remove_L.php?add=success');
 
 
 ?>

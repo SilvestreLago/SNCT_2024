@@ -12,7 +12,6 @@ $senha = htmlspecialchars(strip_tags($_POST['passwd'])) ?? '';
 //TRANSFORMA EM LISTA E VERIFICA
 foreach ($result as $row){
     if(password_verify($senha, $row['senha']) && $email == $row['email']){
-        //echo password_hash($row['senha'], PASSWORD_DEFAULT);
         session_start();
         $_SESSION['LOGADO'] = TRUE;
         header('Location: ../index.php'); //INDEX

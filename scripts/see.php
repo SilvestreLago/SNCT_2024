@@ -1,9 +1,13 @@
 <?php 
 include_once './scripts/conn.php';
-$query = 'SELECT * FROM post';
+
+//SELECIONA TODOS OS POST ORDENADO PELO MAIS NOVO
+$query = 'SELECT * FROM post ORDER BY data_publicacao DESC';
 $result = $db->query($query);
 
-foreach($result as $row){ //CARD DE PUBLICAÇÃO
+//MOSTRA OS POSTS
+foreach($result as $row){ 
+//CARD DE PUBLICAÇÃO
     echo"
     <div class='card'>
         <div class='card-header'>
@@ -19,4 +23,5 @@ foreach($result as $row){ //CARD DE PUBLICAÇÃO
     <br>
     ";
 }
+
 ?>
