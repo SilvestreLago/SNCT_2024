@@ -4,9 +4,10 @@ CREATE TABLE "usuario" (
 	"email"	varchar(30),
 	"senha"	varchar(30),
 	"texto"	text,
-	"cidade" varchar(30),
-	"estado_civil" varchar(10),
-	"interesses" TEXT,
+	"cidade"	varchar(30),
+	"estado_civil"	varchar(10),
+	"interesses"	TEXT,
+	"foto"	varchar,
 	PRIMARY KEY("id" AUTOINCREMENT)
 )
 

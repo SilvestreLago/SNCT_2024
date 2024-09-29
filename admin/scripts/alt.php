@@ -3,6 +3,7 @@ include_once "./conn.php";
 
 //CONTEÚDO PARA ALTERAÇÃO
 $email = trim(htmlspecialchars(strip_tags( $_POST['email']))) ?? '';
+$foto = trim(htmlspecialchars(strip_tags( $_POST['foto']))) ?? '';
 $senha = trim(htmlspecialchars(strip_tags( $_POST['passwd']))) ?? '';
 $name = trim(htmlspecialchars(strip_tags( $_POST['name']))) ?? '';
 $city = trim(htmlspecialchars(strip_tags( $_POST['cidade']))) ?? '';
@@ -14,8 +15,18 @@ $texto = trim(htmlspecialchars(strip_tags( $_POST['texto']))) ?? '';
 //ALTERAÇÕES
 if($email != ''){
     try{ //EMAIL
-        $query1 = $db->prepare("UPDATE usuario SET email = :email WHERE id = 1;");
-        $query1->bindParam(':email', $email, PDO::PARAM_STR);
+        $query0 = $db->prepare("UPDATE usuario SET email = :email WHERE id = 1;");
+        $query0->bindParam(':email', $email, PDO::PARAM_STR);
+        $result = $query0->execute(); 
+    }catch (PDOException $e){ //ERRO
+        echo "Erro: " . $e->getMessage();
+        header('Location: ../alt.php?erro=alt');
+    }
+}
+if($foto != ''){
+    try{ //FOTO
+        $query1 = $db->prepare("UPDATE usuario SET foto = :foto WHERE id = 1;");
+        $query1->bindParam(':foto', $foto, PDO::PARAM_STR);
         $result = $query1->execute(); 
     }catch (PDOException $e){ //ERRO
         echo "Erro: " . $e->getMessage();

@@ -12,5 +12,6 @@ foreach ($result as $row){
     $estado = "$row[estado_civil]";
     $interesses = "$row[interesses]";
     $texto = "$row[texto]";
+    $foto = "$row[foto]";
 }
 ?>

@@ -17,7 +17,7 @@
 
         <div id="profile">
             <div id="profile-pic">
-                <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fwww.urbecom.com%2Fcss%2Fprofile%2Fimg-usuario.svg&sp=1727131895T52791d35a9ef839c2a2f89ed7bc62a85e9f33e7187a3afad636016f3614ea2e9" alt="Foto do perfil">
+                <img src=<?php echo $foto?> alt="Foto do perfil">
             </div>
             <div id="profile-info">
                 <h2><?php echo $nome?></h2>
