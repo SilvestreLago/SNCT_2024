@@ -19,25 +19,25 @@ O objetivo deste minicurso é ensinar aos participantes os conceitos básicos pa
 
 1. **Introdução ao PHP**:
     - Variáveis e constantes em PHP
-    -Estruturas condicionais em PHP
-    -Laços de repetição em PHP
-    -Tipos primitivos do PHP 
-    -Manipulação de strings com PHP
-    -Obtendo dados de formulários com PHP
-    -Expressões Aritméticas com PHP 
-    -Funções Aritméticas do PHP 
-    -Operadores Aritméticos do PHP
-    -Superglobais no PHP 
-    -Seção e Cookies PHP
+    - Estruturas condicionais em PHP
+    - Laços de repetição em PHP
+    - Tipos primitivos do PHP 
+    - Manipulação de strings com PHP
+    - Obtendo dados de formulários com PHP
+    - Expressões Aritméticas com PHP 
+    - Funções Aritméticas do PHP 
+    - Operadores Aritméticos do PHP
+    - Superglobais no PHP 
+    - Seção e Cookies PHP
 
 2. **Introdução ao SQL**:
-    -CREATE – usado para criar o banco de dados ou objetos
-    -DROP – usado para deletar objetos do banco de dados
-    -ALTER – usado para alterar a estrutura do banco de dados
-    -SELECT – usado para recuperar dados do BD
-    -INSERT – usado para inserir dados em uma tabela
-    -UPDATE – usado para atualizar dados existentes em uma tabela 
-    -DELETE – usado para apagar dados de uma tabela
+    - CREATE – usado para criar o banco de dados ou objetos
+    - DROP – usado para deletar objetos do banco de dados
+    - ALTER – usado para alterar a estrutura do banco de dados
+    - SELECT – usado para recuperar dados do BD
+    - INSERT – usado para inserir dados em uma tabela
+    - UPDATE – usado para atualizar dados existentes em uma tabela 
+    - DELETE – usado para apagar dados de uma tabela
 
 3. **Projeto Prático**:
     - Integração HTML e PHP;
